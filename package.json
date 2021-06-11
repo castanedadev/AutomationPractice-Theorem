@@ -1,0 +1,21 @@
+{
+  "name": "automation-theorem",
+  "version": "1.0.0",
+  "description": "Base framework implementation for AutomationPractice.com website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testcafe",
+    "node",
+    "git",
+    "automation",
+    "theorem"
+  ],
+  "author": "castanedadev",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe": "^1.14.2"
+  }
+}
