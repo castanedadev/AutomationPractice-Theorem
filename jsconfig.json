@@ -1,0 +1,16 @@
+{ 
+    "compilerOptions": {
+        "baseUrl": ".",
+        "jsx": "preserve",
+        "paths": {
+            "*": [
+                "*",
+                "src/*",
+                "tests/*"
+            ],
+            "@src/*": ["src/*"],
+            "@tests/*": ["tests/*"],
+        }
+    },
+    "exclude": ["node_modules"]
+}
