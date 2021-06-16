@@ -5,11 +5,17 @@
         "paths": {
             "*": [
                 "*",
-                "src/*",
-                "tests/*"
+                "src/pages/*",
+                "src/pages/pageActions/*",
+                "tests/*",
+                "config/*",
+                "src/constants/*"
             ],
-            "@src/*": ["src/*"],
+            "@pages/*": ["src/pages/*"],            
+            "@pageActions/*": ["src/pages/pageActions/*"],
             "@tests/*": ["tests/*"],
+            "@config/*": ["config/*"],
+            "@constants/*": ["src/constants/*"]
         }
     },
     "exclude": ["node_modules"]

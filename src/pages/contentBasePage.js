@@ -4,5 +4,7 @@ export default class ContentBasePage {
   /**
    * Initializes a new instance of {@link ContentBasePage}
    */
-  constructor() {}
+  constructor() {
+    this.container = Selector('#columns');
+  }
 }
