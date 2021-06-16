@@ -25,4 +25,14 @@ export default class BasePageActions {
     logger.info('Navigating to Conctact Us');
     await t.click(this.headerPage.signInLink);
   }
+
+  /**
+   * Navigate to given category
+   * @param {String} targetCategory identifies the desired category
+   */
+  async goToCategory(targetCategory) {
+    logger.info(`Navigating to category ${targetCategory}`);
+    const menuOption = await this.headerPage.categoryOptions.withAttribute('title', targetCategory);
+    await t.hover(menuOption).click(menuOption);
+  }
 }
