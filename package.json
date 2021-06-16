@@ -4,7 +4,9 @@
   "description": "Base framework implementation for AutomationPractice.com website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "which link-module-alias && link-module-alias clean || echo",
+    "postinstall": "link-module-alias"
   },
   "keywords": [
     "testcafe",
@@ -13,9 +15,52 @@
     "automation",
     "theorem"
   ],
-  "author": "castanedadev",
+  "_moduleAliases": {
+    "@pages": "src/pages",
+    "@pageActions": "src/pages/pageActions",
+    "@tests": "tests",
+    "@config": "config",
+    "@constants": "src/constants"
+  },
+  "author": "@castanedadev",
   "license": "ISC",
   "dependencies": {
+    "link-module-alias": "^1.2.0",
+    "path": "^0.12.7",
+    "source-map": "^0.5.7",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-webpack": "^0.13.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-lean-imports": "^0.3.3",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "faker": "^5.5.3",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1",
     "testcafe": "^1.14.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "settings": {
+    "import/resolver": "webpack"
   }
 }
