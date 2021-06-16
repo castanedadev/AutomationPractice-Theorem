@@ -10,7 +10,7 @@ This is the automation framework generated as a result of the: _“up to” 8 ho
 
 ### How to run?!
 - ```Node.js``` and ```npm``` must be installed prior
-- ```npm install -g testcafe```
+- Run ```npm i```
 - From the console: ```testcafe chrome tests/*.js```
 - If using *Windows/WSL* ```testcafe --ports 63305,63305 --live remote tests/*.js```
 
