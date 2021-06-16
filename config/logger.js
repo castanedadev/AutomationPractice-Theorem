@@ -9,7 +9,7 @@ const logger = winston.createLogger({
       level: 'info',
     }),
     new winston.transports.File({
-      filename: 'somefile.log',
+      filename: 'application-info-log.log',
       level: 'info',
     }),
   ],
