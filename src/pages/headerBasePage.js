@@ -9,5 +9,7 @@ export default class HeaderBasePage {
     this.nav = this.container.child('.nav');
     this.signInLink = this.nav.find('a.login');
     this.contactUsLink = this.nav.find('a').withExactText('Contact us');
+    this.categoriesMenu = this.container.find('ul.menu-content');
+    this.categoryOptions = this.categoriesMenu.child('li').child('a');
   }
 }
