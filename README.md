@@ -28,9 +28,9 @@ This is the automation framework generated as a result of the: _“up to” 8 ho
 - Switch to typescript FTW!
 - Enhance reporting & logging
 - Add methods to abstract common actions such as: ```SelectGivenOptionFromDropdown()``` 
-- Introduce githooks pre-commit, pre-push for certain tasks
 - Expand [filtering capabilities](https://testcafe.io/documentation/402657/reference/testcafe-api/runner/filter) to run tests by [metatags](https://testcafe.io/documentation/402734/reference/test-api/test/meta)
 - Introduce pull request template so that any team member follows that
 - Introduce [RequestLogger](https://testcafe.io/documentation/402668/reference/test-api/requestlogger) to check for API calls in certain points of the website
+- Introduce githooks pre-commit, pre-push for certain tasks
 
 **NOTE**: This was developed in Windows using ```WSL 1.0``` / ```Ubuntu 20.0.4``` 
