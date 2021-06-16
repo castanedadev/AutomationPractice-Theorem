@@ -8,6 +8,16 @@ This is the automation framework generated as a result of the: _“up to” 8 ho
 - [Winston](https://github.com/winstonjs/winston) (for logging)
 - [Faker.js](https://github.com/winstonjs/winston) (for auto-generated data)
 
+### How to run?!
+- ```Node.js``` and ```npm``` must be installed prior
+- ```npm install -g testcafe```
+- From the console: ```testcafe chrome tests/*.js```
+- If using *Windows/WSL* ```testcafe --ports 63305,63305 --live remote tests/*.js```
+
+### Final Results
+- Have a look at the ```FinalResults_Sample.png``` file
+- Have a look at the file that contains the logging
+- Commited to 7 urgent tickets, completed 4 [See board](https://sharing.clickup.com/b/h/4-16853087-2/6608f0c1f5a4dae)
 ### Scenarios that aren't request but I feel they should (Ordered by priority)
 - Verify end to end scenario that covers the complete flow from Summary to Payment
 - Verify that user sessions don't share items in the cart
