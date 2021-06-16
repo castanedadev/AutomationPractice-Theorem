@@ -35,4 +35,9 @@ export default class BasePageActions {
     const menuOption = await this.headerPage.categoryOptions.withAttribute('title', targetCategory);
     await t.hover(menuOption).click(menuOption);
   }
+
+  async search(query) {
+    logger.debug(`Searching for: ${query}`);
+    await t.typeText(this.headerPage.searchQuerInput, query).pressKey('enter');
+  }
 }

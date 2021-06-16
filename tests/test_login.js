@@ -1,8 +1,6 @@
 import { t } from 'testcafe';
 import { internet } from 'faker';
 import urls from '@constants/urls';
-import logger from '@config/logger';
-import getCredentials from '@config/users';
 import BasePageActions from '@pageActions/basePageActions';
 import LoginPageActions from '@pageActions/Login/loginPageActions';
 import MyAccountPageActions from '@pageActions/Account/myAccountPageActions';
@@ -12,8 +10,6 @@ const basePageActions = new BasePageActions();
 const loginPageActions = new LoginPageActions();
 const myAccountPageActions = new MyAccountPageActions();
 const accountCreationPageActions = new AccountCreationPageActions();
-
-const { email: existingEmail, password: existingPass } = getCredentials('testUser1');
 
 fixture('Test - Login Page')
   .meta('smoke', 'true')
@@ -25,7 +21,6 @@ fixture('Test - Login Page')
     ctx.password = internet.password();
   }).beforeEach(async (t) => {
     await basePageActions.goToSignIn();
-    logger.info(`${existingEmail} ---- ${existingPass}`);
   });
 
 test.meta('testCaseId', 'TC0001')('Verify new account can be created', async (t) => {
